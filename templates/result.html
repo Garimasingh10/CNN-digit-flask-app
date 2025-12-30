@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction Result</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #141e30, #243b55);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+    .card {
+      background: #1f2937;
+      padding: 30px 35px;
+      border-radius: 12px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+      width: 380px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+    .digit {
+      font-size: 40px;
+      font-weight: bold;
+      color: #fbbf24;
+      margin: 8px 0 18px 0;
+    }
+    img {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+      background: #111827;
+      border-radius: 10px;
+      padding: 10px;
+      border: 1px solid #4b5563;
+      margin-bottom: 20px;
+    }
+    a.button {
+      display: inline-block;
+      background: #3b82f6;
+      color: #fff;
+      padding: 9px 16px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: background 0.2s ease, transform 0.1s ease;
+    }
+    a.button:hover {
+      background: #2563eb;
+      transform: translateY(-1px);
+    }
+    a.button:active {
+      transform: translateY(0);
+    }
+    .note {
+      font-size: 11px;
+      color: #9ca3af;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Prediction Result</h1>
+    <div class="digit">{{ prediction }}</div>
+
+    <img src="{{ image_url }}" alt="Uploaded digit">
+
+    <br>
+    <a href="/" class="button">Try Another Image</a>
+    <div class="note">Upload a new digit image to get another prediction.</div>
+  </div>
+</body>
+</html>
